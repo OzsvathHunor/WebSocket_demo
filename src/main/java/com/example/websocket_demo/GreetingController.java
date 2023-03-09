@@ -8,8 +8,8 @@ import org.springframework.web.util.HtmlUtils;
 @Controller
 public class GreetingController {
 
-    @MessageMapping("/hello")
-    @SendTo("/topic/greetings")
+    @MessageMapping("/hello")//ezt szeretnem nezni
+    @SendTo("/topic/greetings")//ide kapom az udvozlest, ide jon a JSON adat
     public Greeting greet(HelloMessage message) throws InterruptedException {
         Thread.sleep(2000);
         return new Greeting("Hello " +
